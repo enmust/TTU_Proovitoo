@@ -1,0 +1,18 @@
+1. Päev:
+    Kulunud aeg kokku:    5 tundi 30 minutit
+    Mis sai valmis: Tabel, kuhu info kuvada sai täiesti tehtud koos esialgse otsinguga geokogu andmebaasist.
+    Probleemid:     Kuidas leht üles ehitada ja milliseid lisasid (libraries) kasutada. Valisin jQuery, Bootstrapi ja Datatables. Alguses võttis veel aega see, et kuidas request tööle saada, sest on cross-origin request. Selle parandamiseks tõmbasin Google Chrome plugina "Allow-Control-Allow-Origin:*" Plugini link: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi	
+
+2. Päev:
+    Kulunud aeg: 5 tundi 15 minutit
+    Mis sai valmis:  Lisasin otsinguvormi 6 erinevat välja. Tegin nii, et kõik otsinguväljad saadavad requesti ja kuvavad ka asjakohase info. Tegin otsingu ilusamaks ja responsivamaks ning lisasin tekstiväljadele 3 ja 4 ligikaudse otsingu.
+    Probleemid: Pidin algse requesti ehitamise ümber tegema, mis võttis üsna palju aega.  
+
+
+3. Päev:
+    Kulunud aeg: 6 tundi
+    Mis sai valmis: Otsing töötab nii nagu oli ette nähtud. Lisasin tekstiväljadele 1 ja 2 autocomplete peale teist tähemärki. Tegin nii, et sügavuse otsingul tagastatakse kõik vastused, mis jäävad tekstiväljade 5 ja 6 vahele. Lisasin ka viimase lihvi kujundusele.
+    Probleemid: Autocomplete peale teist tähemärki tagastab liiga palju vastuseid, et neid kuvada lehel, seega pidin piirama tulemuste arvu, et leht kokku ei jookseks. Sügavuse otsingu requestiga läks aega, sest geokogu apis ei leidnud infot, kuidas täpselt range filtrit kasutada. Lõpus avastasin, et request peab otsima depth__range või depth_interval__range, mitte mõlemat korraga ühes requestis. Seega tegin kiirelt ühe requesti, mis eraldi otsib depth_interval__range.
+
+Kokkuvõtteks: Töö läks suhteliselt ladusalt. Aega nõudis erinevatele probleemidele lahenduste otsimine ja siis nende lahendamine. 
+
