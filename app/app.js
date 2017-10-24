@@ -68,8 +68,10 @@ $('#locality__locality').keyup(function(e) {
     if (searchLocality.length > 1) {
 
         var request = $.ajax({
-            url: url,
-            dataType: 'json',
+            url: url + '&format=jsonp',
+            dataType: 'jsonp',
+            cache: true,
+            //jsonpCallback: 'jsonCallback',
             success: function (response) {
                 //console.log(response['count']);
 
@@ -117,8 +119,10 @@ $('#stratigraphy__stratigraphy').keyup(function(e) {
     if (searchStratigraphy.length > 1) {
 
         var request = $.ajax({
-            url: url,
-            dataType: 'json',
+            url: url + '&format=jsonp',
+            dataType: 'jsonp',
+            cache:true,
+            //jsonpCallback: 'jsonCallback',
             success: function (response) {
                 //console.log(response['count']);
 
@@ -150,6 +154,7 @@ $('#stratigraphy__stratigraphy').keyup(function(e) {
 });
 
 
+
 $('#search-button').click(function(e) {
     e.preventDefault();
     $('#search-button').hide();
@@ -162,8 +167,10 @@ $('#search-button').click(function(e) {
     if (url !== 'https://api2.geokogud.info/sample/?') {
 
         var request = $.ajax({
-            url: url,
-            dataType: 'json',
+            url: url + '&format=jsonp',
+            dataType: 'jsonp',
+            cache: true,
+            //jsonCallback: 'jsonCallback',
             success: function (response) {
                 //console.log(response);
 
@@ -230,8 +237,10 @@ $('#search-button').click(function(e) {
 
             //console.log("Constructed url: " + url);
             var request = $.ajax({
-                url: url,
-                dataType: 'json',
+                url: url + '&format=jsonp',
+                dataType: 'jsonp',
+                cache: true,
+                //jsonpCallback: 'jsonCallback',
                 success: function (response) {
 
                     if (response['count'] > 0) {
@@ -273,6 +282,10 @@ $('#search-button').click(function(e) {
         $('#search-button').show();
     }
  });
+
+// function jsonCallback(data) {
+//     console.log(data);
+// }
 
 // function handleEventEnter(e) {
 //     if(e.keyCode === 13) {

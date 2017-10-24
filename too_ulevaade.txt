@@ -14,5 +14,11 @@
     Mis sai valmis: Otsing töötab nii nagu oli ette nähtud. Lisasin tekstiväljadele 1 ja 2 autocomplete peale teist tähemärki. Tegin nii, et sügavuse otsingul tagastatakse kõik vastused, mis jäävad tekstiväljade 5 ja 6 vahele. Lisasin ka viimase lihvi kujundusele.
     Probleemid: Autocomplete peale teist tähemärki tagastab liiga palju vastuseid, et neid kuvada lehel, seega pidin piirama tulemuste arvu, et leht kokku ei jookseks. Sügavuse otsingu requestiga läks aega, sest geokogu apis ei leidnud infot, kuidas täpselt range filtrit kasutada. Lõpus avastasin, et request peab otsima depth__range või depth_interval__range, mitte mõlemat korraga ühes requestis. Seega tegin kiirelt ühe requesti, mis eraldi otsib depth_interval__range.
 
+4. Päev:
+    Kulunud aeg: 1.5 tundi
+    Mis sai valmis: Viisin läbi cross-origin muudatuse, et rakendus ei sõltuks brauseri lisast. 
+    Probleemid: Ei saanud aru miks request ei tagastanud vastust, kuigi url oli õigesti vormistatud ja kood ka nagu töötas. Tuli välja, et jQuery lisas timestampi urli lõppu, mis pani geokogu api errorit tagastama. Requestis tuli viia läbi muudatus (cache: true).
+
 Kokkuvõtteks: Töö läks suhteliselt ladusalt. Aega nõudis erinevatele probleemidele lahenduste otsimine ja siis nende lahendamine. 
+Mis saaks paremini: Koodi saaks optimeerida, näiteks requestid teha ühte funktsiooni. 
 
